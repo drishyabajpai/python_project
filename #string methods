@@ -1,0 +1,12 @@
+a="!!harry"
+print(len(a))
+print(a)
+print(a.upper())
+print(a.lower())
+print(a.strip("!"))
+print(a.replace("harry", "john"))
+print(a.split("!")) 
+blogheading = "welcome to the fuck gosh"
+print(blogheading.capitalize())
+print(blogheading.swapcase())
+
