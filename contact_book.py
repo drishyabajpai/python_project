@@ -7,13 +7,13 @@ FILE_NAME = "contacts.json"
 # ---------------------------
 # Load Contacts
 # ---------------------------
-def load_contacts():
-    if os.path.exists(FILE_NAME):
-        with open(FILE_NAME, "r") as file:
-            return json.load(file)
+def load_contacts(): #it is a function that loads the contacts from a JSON file named "contacts.json". It checks if the file exists using os.path.exists(). If the file exists, it opens the file in read mode and uses json.load() to load the JSON data into a Python dictionary. If the file does not exist, it returns an empty dictionary.
+    if os.path.exists(FILE_NAME): #the os.path.exists() function checks if the specified file or directory exists in the file system. In this case, it checks if the "contacts.json" file exists.
+        with open(FILE_NAME, "r") as file: #the with statement is used to ensure that the file is properly closed after it is no longer needed.
+            return json.load(file)  #when the file is opened in read mode, the json.load() function is used to parse the JSON data from the file and convert it into a Python dictionary. The resulting dictionary is then returned by the load_contacts() function.
     return {}
 
-
+#this function checks if the file "contacts.json" exists. If it does, it opens the file in read mode and loads the JSON data into a Python dictionary using json.load(). If the file does not exist, it returns an empty dictionary.
 # ---------------------------
 # Save Contacts
 # ---------------------------
